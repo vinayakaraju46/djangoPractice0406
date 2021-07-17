@@ -35,7 +35,6 @@ def student_list(request):
             return JsonResponse(StudentData_Serializer.data, status=status.HTTP_201_CREATED)
         return JsonResponse(StudentData_Serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
 @api_view(['GET', 'POST', 'DELETE'])
 def student_details(request):
     req_data = JSONParser().parse(request)
